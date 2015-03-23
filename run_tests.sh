@@ -32,7 +32,7 @@ case $1 in
         ln -s ../../.. io
         cd io
         sh autogen.sh
-        ./configure CFLAGS="`cat ../../build/cflags`"
+        ./configure CFLAGS="`cat ../io/tmp/gap/build/cflags`"
         make
         cd ../..
     ;;

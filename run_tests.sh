@@ -37,5 +37,5 @@ case $1 in
         cd ../..
     ;;
 esac
-echo "Read(\"tst/testall.g\"); quit;" | sh bin/gap.sh | tee testlog.txt | grep --colour=always -E "########> Diff|$"
+echo "Read(\"pkg/io/tst/testall.g\"); quit;" | sh bin/gap.sh | tee testlog.txt | grep --colour=always -E "########> Diff|$"
 ( ! grep "########> Diff" testlog.txt )

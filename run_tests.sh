@@ -26,8 +26,8 @@ case $1 in
     hpcgap)
         git clone --depth=50 -b hpcgap-default https://github.com/gap-system/gap.git gap
         cd gap
-        git checkout hpcgap-default
-        ./make.hpc
+        git clone --depth=50 https://github.com/gap-system/ward extern/ward
+        ./make.hpc WARD="extern/ward"
         cd pkg
         ln -s ../../.. io
         cd io

@@ -18,6 +18,7 @@ case $1 in
         tar xvzf GAPDoc-1.5.1.tar.gz 2> /dev/null
         ln -s ../../.. io
         cd io
+        sh autogen.sh
         ./configure
         make
         cd ../..
@@ -30,6 +31,7 @@ case $1 in
         cd pkg
         ln -s ../../.. io
         cd io
+        sh autogen.sh
         ./configure CFLAGS="`cat ../../build/cflags`"
         make
         cd ../..

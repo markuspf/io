@@ -24,7 +24,7 @@ case $1 in
         cd ../..
         ;;
     hpcgap)
-        git clone --depth=50 https://github.com/gap-system/gap.git gap
+        git clone --depth=50 -b hpcgap-default https://github.com/gap-system/gap.git gap
         cd gap
         git checkout hpcgap-default
         ./make.hpc
